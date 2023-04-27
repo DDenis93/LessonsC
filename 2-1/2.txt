@@ -1,0 +1,21 @@
+/******************************************************************************
+
+Целочисленные константы
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    std::cout<<"Hello World" << std::endl;
+    cout << "Decimal constants: " << 0 << ' ' << 188 << ' ' << -10 << std::endl;
+    cout << "Octal: " << 076 << ' ' << 0123 << std::endl;
+    cout << "Hexadecimal: " << 0x76 << ' ' << 0x123 << ' ' << 0xEDF << std::endl;
+    int x = 123456;
+    unsigned int y = 1233325u;
+    cout << x << ' ' << y << endl;
+    return 0;
+}
