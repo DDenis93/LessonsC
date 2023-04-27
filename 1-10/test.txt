@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+/*
+Занятие 14 ноября. Понедельник
+*/
+
+
+//int fact(int n) {
+//    if (n == 1) return 1;
+//    return n * fact(n - 1);
+//}
+//int fact2(int n) {
+//    int res = 1;
+//    for (int i = 2; i <= n; i++)
+//        res = res * i;
+//    return res;
+//}
+int fibo(int n) {
+    if (n == 1 || n == 2) return 1;
+    return fibo(n - 1) + fibo(n - 2);
+}
+int fibo2(int n) {
+    int k = 0, m = 1, res = 1;
+    for (int i = 2; i <= n; i++) {
+        res = k + m;
+        k = m;
+        m = res;
+    }
+    return res;
+}
+int main()
+{
+    setlocale(0, "Rus");
+    /*cout << fact(8) << endl;
+    cout << fact2(8) << endl;*/
+
+    int t1, t2;
+    t1 = time(0);
+    cout << fibo(50) << endl;
+    t2 = time(0);
+    cout << t2 - t1 << endl;
+
+    int t3, t4;
+    t3 = time(0);
+    cout << fibo2(50) << endl;
+    t4 = time(0);
+    cout << t4 - t3 << endl;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+class Exception{
+    public: string str;
+    Exception(){
+        str="hello";
+    }
+};
+
+int main(){
+    Exception q;
+    float a,b;
+    cout<<"Enter a and b";
+    cin>>a>>b;
+    try{
+        if(b==0) throw 0; //только внутри блока try
+        if(b<0) throw 5.1;
+        if(a>1000) throw 'q';
+        cout<<a/b;
+    }
+    catch(int n){
+        cout<<"Delenie na - "<<n;
+    }
+    catch(double s){
+        s = b;
+        cout<<"Delenie na minus - "<<s;
+    }
+    catch(...){
+        cout<<"Error";
+    }
+}
